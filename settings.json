@@ -1,0 +1,58 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.tree.indent": 20,
+    "workbench.startupEditor": "none",
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "redhat.telemetry.enabled": false,
+    "vim.leader": ",",
+    "vim.useCtrlKeys": true,
+    "vim.handleKeys": {
+        "<C-d>": true,
+        "<C-y": false,
+        "<C-s>": false,
+        "<C-z>": false,
+        "<C-r>": true, 
+        "<C-f>": true
+    },
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["<Space>"],
+            "after": ["/"]
+        },
+        {
+            "before": ["ö"],
+            "after": ["$"]
+        }    
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": ["ö"],
+            "after": ["$"]
+        }    
+    ],
+    "[markdown]": {
+        "editor.wordWrap": "off"
+    },
+    "terminal.integrated.copyOnSelection": true,
+    "editor.fontSize": 15,
+    "debug.console.fontSize": 15,
+    "terminal.integrated.fontSize": 15,
+    "vs-kubernetes": {
+        "vs-kubernetes.crd-code-completion": "enabled",
+        "vs-kubernetes.ignore-recommendations": true,
+        "vs-kubernetes.minikube-show-information-expiration": "2023-05-10T14:36:01.964Z"
+    },
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+    "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+    "editor.tabSize": 2,
+    "editor.rulers": [
+        100
+    ]
+}
