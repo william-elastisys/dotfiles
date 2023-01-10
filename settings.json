@@ -13,7 +13,7 @@
         "<C-s>": false,
         "<C-z>": false,
         "<C-r>": true, 
-        "<C-f>": true
+        "<C-f>": false
     },
     "vim.insertModeKeyBindings": [
         {
