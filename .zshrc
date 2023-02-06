@@ -35,7 +35,8 @@ source $ZSH/oh-my-zsh.sh
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 
 alias gs="git status"
-alias ga="git add -p"
+alias ga="git add"
+alias gap="git add -p"
 alias gc="git commit -m"
 alias gf="git fetch"
 alias gp="git push"
