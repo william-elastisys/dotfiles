@@ -13,7 +13,10 @@
         "<C-s>": false,
         "<C-z>": false,
         "<C-r>": true, 
-        "<C-f>": false
+        "<C-f>": false,
+        "<C-a>": false,
+        "<C-w>": false,
+        "<C-x>": false
     },
     "vim.insertModeKeyBindings": [
         {
@@ -29,13 +32,29 @@
         {
             "before": ["ö"],
             "after": ["$"]
-        }    
+        },
+        {
+            "before": ["tab"],
+            "after": ["tab"]
+        },
+        {
+            "before": ["shift+tab"],
+            "after": ["outdent"]
+        }
     ],
     "vim.visualModeKeyBindings": [
         {
             "before": ["ö"],
             "after": ["$"]
-        }    
+        },
+        {
+            "before": ["tab"],
+            "after": ["tab"]
+        },
+        {
+            "before": ["shift+tab"],
+            "after": ["outdent"]
+        }
     ],
     "[markdown]": {
         "editor.wordWrap": "off"
@@ -54,5 +73,6 @@
     "editor.tabSize": 2,
     "editor.rulers": [
         100
-    ]
+    ],
+    "editor.minimap.enabled": false
 }
