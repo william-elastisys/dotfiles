@@ -1,78 +1,108 @@
 {
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.tree.indent": 20,
-    "workbench.startupEditor": "none",
-    "git.confirmSync": false,
-    "git.autofetch": true,
-    "redhat.telemetry.enabled": false,
-    "vim.leader": ",",
-    "vim.useCtrlKeys": true,
-    "vim.handleKeys": {
-        "<C-d>": true,
-        "<C-y": false,
-        "<C-s>": false,
-        "<C-z>": false,
-        "<C-r>": true, 
-        "<C-f>": false,
-        "<C-a>": false,
-        "<C-w>": false,
-        "<C-x>": false
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.tree.indent": 20,
+  "workbench.startupEditor": "none",
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "redhat.telemetry.enabled": false,
+  "editor.lineNumbers": "relative",
+
+  "vim.leader": "<Space>",
+  "vim.useCtrlKeys": true,
+  "vim.handleKeys": {
+      "<C-d>": true,
+      "<C-y": false,
+      "<C-s>": false,
+      "<C-z>": false,
+      "<C-r>": true,
+      "<C-f>": false,
+      "<C-a>": false,
+      "<C-w>": false,
+      "<C-x>": false,
+      "<C-ö>": false
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // NAVIGATION
+    // switch b/w buffers
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+
+    // splits
+    { "before": ["leader", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s"], "commands": [":split"] },
+
+    // panes
+    { "before": ["leader", "h"], "commands": ["workbench.action.focusLeftGroup"] },
+    { "before": ["leader", "j"], "commands": ["workbench.action.focusBelowGroup"] },
+    { "before": ["leader", "k"], "commands": ["workbench.action.focusAboveGroup"] },
+    { "before": ["leader", "l"], "commands": ["workbench.action.focusRightGroup"] },
+
+    // file tree
+    { "before": ["leader", "e"], "commands": ["workbench.explorer.fileView.focus"] },
+
+    // others
+    { "before": ["leader", "w"], "commands": ["workbench.action.files.save"] },
+    { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["leader", "p"], "commands": ["workbench.action.formatDocument"] },
+    { "before": ["g", "h"], "commands": ["editor.action.showDefinitionPreviewHover"] },
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+
+    { "before": ["leader", "d"], "commands": ["editor.action.showDefinitionPreviewHover"]},
+    { "before": ["leader", "b"], "commands": ["workbench.action.navigateBack"]},
+  ],
+  "vim.insertModeKeyBindings": [
+    { "before": ["j", "j"], "after": ["<Esc>"] }
+  ],
+  "vim.normalModeKeyBindings": [
+    { "before": ["ö"], "after": ["$"] },
+  ],
+  "vim.visualModeKeyBindings": [
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    { "before": ["ö"], "after": ["$"] },
+  ],
+  "[markdown]": {
+    "editor.wordWrap": "off",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "terminal.integrated.copyOnSelection": true,
+  "editor.fontSize": 15,
+  "debug.console.fontSize": 15,
+  "terminal.integrated.fontSize": 15,
+  "vs-kubernetes": {
+    "vs-kubernetes.crd-code-completion": "enabled",
+    "vs-kubernetes.ignore-recommendations": true,
+    "vs-kubernetes.minikube-show-information-expiration": "2024-01-06T09:11:07.062Z"
+  },
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+  "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+  "editor.tabSize": 2,
+  "editor.rulers": [
+      100
+  ],
+  "editor.minimap.enabled": false,
+  "GitLive.Special branches": "main|master|trunk|dev|develop|qa|test|release[-/].*",
+  "GitLive.Issue tracker integration": "Disabled",
+  "go.toolsManagement.autoUpdate": true,
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "[go]": {
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
     },
-    "vim.insertModeKeyBindings": [
-        {
-            "before": ["j", "j"],
-            "after": ["<Esc>"]
-        }
-    ],
-    "vim.normalModeKeyBindings": [
-        {
-            "before": ["<Space>"],
-            "after": ["/"]
-        },
-        {
-            "before": ["ö"],
-            "after": ["$"]
-        },
-        {
-            "before": ["tab"],
-            "after": ["tab"]
-        },
-        {
-            "before": ["shift+tab"],
-            "after": ["outdent"]
-        }
-    ],
-    "vim.visualModeKeyBindings": [
-        {
-            "before": ["ö"],
-            "after": ["$"]
-        },
-        {
-            "before": ["tab"],
-            "after": ["tab"]
-        },
-        {
-            "before": ["shift+tab"],
-            "after": ["outdent"]
-        }
-    ],
-    "[markdown]": {
-        "editor.wordWrap": "off"
-    },
-    "terminal.integrated.copyOnSelection": true,
-    "editor.fontSize": 15,
-    "debug.console.fontSize": 15,
-    "terminal.integrated.fontSize": 15,
-    "vs-kubernetes": {
-        "vs-kubernetes.crd-code-completion": "enabled",
-        "vs-kubernetes.ignore-recommendations": true,
-        "vs-kubernetes.minikube-show-information-expiration": "2023-05-10T14:36:01.964Z"
-    },
-    "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
-    "terminal.integrated.shellIntegration.decorationsEnabled": "never",
-    "editor.tabSize": 2,
-    "editor.rulers": [
-        100
-    ],
-    "editor.minimap.enabled": false
+    "editor.suggest.snippetsPreventQuickSuggestions": false
+  },
+  "gopls": {
+    "build.buildFlags": ["-tags", "integration"]
+  },
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": [
+    "--fast"
+  ],
+  "files.trimTrailingWhitespace": true,
+  "files.associations": {
+    "*.gotmpl": "helm"
+  }
 }
