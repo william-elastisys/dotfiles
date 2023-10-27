@@ -1,3 +1,6 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
 ZSH_DISABLE_COMPFIX="true"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -47,6 +50,8 @@ alias gd="git diff"
 alias bat="batcat -p"
 
 export PATH="${PATH}:${HOME}/.krew/bin"
+export PATH=$PATH:/home/william/go/bin
+export PATH="$PATH:$HOME/.local/bin"
 
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 
@@ -78,3 +83,7 @@ unset __conda_setup
 complete -o default -F __start_kubectl kn
 
 eval "$(starship init zsh)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
