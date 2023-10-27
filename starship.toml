@@ -30,6 +30,11 @@ symbol = " "
 [elm]
 symbol = " "
 
+[env_var]
+variable = "TELEPRESENCE_POD"
+#symbol = "⎈ KC:"
+format = ' inside pod [\[($env_value)\] ](red)'
+
 [git_branch]
 symbol = " "
 
@@ -89,11 +94,6 @@ disabled = true
 disabled = true
 
 SPACESHIP_KUBECONTEXT_SYMBOL='⎈'
-
-# [env_var]
-# variable = "KUBECONFIG"
-# symbol = "⎈ KC:"
-# format = '[($env_value) ](dimmed blue)'
 
 [kubernetes]
 disabled = false
